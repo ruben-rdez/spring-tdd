@@ -8,7 +8,6 @@ import com.spring.tdd.dto.ProfileResponseDTO;
 import com.spring.tdd.service.ProfileService;
 import jakarta.validation.Valid;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/profiles")
@@ -50,7 +49,7 @@ public class ProfileController {
                 profile.getId(),
                 profile.getName(),
                 profile.getAge()))
-            .collect(Collectors.toList());
+            .toList();
         
         return new ResponseEntity<>(profiles, HttpStatus.OK);
     }

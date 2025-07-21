@@ -15,7 +15,7 @@ import com.spring.tdd.model.Profile;
 import com.spring.tdd.repository.ProfileRepository;
 
 @ExtendWith(MockitoExtension.class)
-public class ProfileServiceTest {
+class ProfileServiceTest {
 
     @Mock
     private ProfileRepository profileRepository;

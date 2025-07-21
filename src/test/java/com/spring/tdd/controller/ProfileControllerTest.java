@@ -19,7 +19,7 @@ import org.springframework.http.MediaType;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ProfileControllerTest {
+class ProfileControllerTest {
     
     @Autowired
     private MockMvc mockMvc;
