@@ -32,8 +32,8 @@ public class ProfileControllerTest {
         profileRepository.deleteAll();
     }
 
-        @Test
-    public void shouldGetAllProfiles() throws Exception {
+    @Test
+    void shouldGetAllProfiles() throws Exception {
         mockMvc.perform(post("/api/profiles")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"name\":\"Charles Lee\",\"age\":20}"))
@@ -57,7 +57,7 @@ public class ProfileControllerTest {
     }
 
     @Test
-    public void shouldCreateProfile() throws Exception {
+    void shouldCreateProfile() throws Exception {
         mockMvc.perform(post("/api/profiles")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"name\":\"John Doe\",\"age\":30}"))
@@ -69,7 +69,7 @@ public class ProfileControllerTest {
     }
     
     @Test
-    public void shouldGetProfile() throws Exception{
+    void shouldGetProfile() throws Exception{
         String responseBody = mockMvc.perform(post("/api/profiles")
             .contentType(MediaType.APPLICATION_JSON)
             .content("{\"name\":\"Suki Hashimoto\",\"age\":10}"))

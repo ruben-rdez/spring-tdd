@@ -24,7 +24,7 @@ public class ProfileServiceTest {
     private ProfileService profileService;
 
     @Test
-    public void findAllProfiles() {
+    void findAllProfiles() {
         final List<Profile> profiles = List.of(
             new Profile("Alice", 30),
             new Profile("Bob", 25)
