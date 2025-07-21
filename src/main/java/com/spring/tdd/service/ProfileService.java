@@ -6,6 +6,7 @@ import com.spring.tdd.dto.ProfileResponseDTO;
 import com.spring.tdd.model.Profile;
 import com.spring.tdd.repository.ProfileRepository;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProfileService {
@@ -22,7 +23,7 @@ public class ProfileService {
         return new ProfileResponseDTO(savedProfile.getId(), savedProfile.getName(), savedProfile.getAge());
     }
 
-    public java.util.Optional<ProfileResponseDTO> getProfile(Long id) {
+    public Optional<ProfileResponseDTO> getProfile(Long id) {
         return profileRepository.findById(id)
                 .map(profile -> new ProfileResponseDTO(
                     profile.getId(), 
@@ -34,4 +35,5 @@ public class ProfileService {
     public List<Profile> findAllProfiles() {
         return profileRepository.findAll();
     }
+
 }

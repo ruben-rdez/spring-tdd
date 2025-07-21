@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import com.spring.tdd.dto.ProfileRequestDTO;
 import com.spring.tdd.dto.ProfileResponseDTO;
 import com.spring.tdd.service.ProfileService;
-import com.spring.tdd.model.Profile;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
