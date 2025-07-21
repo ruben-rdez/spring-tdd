@@ -33,8 +33,9 @@ class ProfileServiceTest {
         when(profileRepository.findAll()).thenReturn(profiles);
         List<Profile> result = profileService.findAllProfiles();
 
-        Assertions.assertThat(result).isNotNull();
-        Assertions.assertThat(result).hasSize(2);
+        Assertions.assertThat(result)
+            .isNotNull()
+            .hasSize(2);
         Assertions.assertThat(result.get(0).getName()).isEqualTo("Alice");
         Assertions.assertThat(result.get(1).getName()).isEqualTo("Bob");
         Assertions.assertThat(result.get(0).getAge()).isEqualTo(30);
